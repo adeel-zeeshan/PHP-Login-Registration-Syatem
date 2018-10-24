@@ -1,4 +1,4 @@
-# PHP-Login-Registration-Syatem
+# PHP-Login-Registration-System
 Simple PHP Registration and Login
 Requirements
 Install WAMP/XAMP
