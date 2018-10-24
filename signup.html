@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Registration-From</title>
+<style>
+input{
+	width:200px;
+	height:30px;
+	outline: none;
+	
+	}
+</style>
+<script>
+function validate() {
+    var name = document.getElementById('fname').value;
+	var lname = document.getElementById('lname').value;
+	var email = document.getElementById('email').value;
+	var password = document.getElementById('password').value;
+	var cpass = document.getElementById('cpassword').value;
+    if (name == "") {
+        alert("Enter First Name");
+		return false;
+    }
+	if (lname == "") {
+        alert("Enter Last Name");
+		return false;
+    }
+	if (email == "") {
+        alert("Enter Email");
+		return false;
+    }
+    if (password == "") {
+        alert("Enter Password");
+        return false;
+    }
+	if (password != cpass) {
+        alert("confirm password does not match");
+		return false;
+    }
+}
+</script>
+</head>
+
+<body>
+<table align="center" style="text-align:left;">
+<form name="registration" action="process/signup_process.php" method="post">
+<tr>
+<td><label for="first_name">*First Name</label></td>
+<td><input type="text" id="fname" name="first_name" placeholder=" Enter First Name"><br><br></td></tr>
+<tr>
+<td><label for="last_name">Last Name</label></td>
+<td><input type="text" id="lname" name="last_name" placeholder=" Enter Last Name"><br><br></td></tr>
+<tr>
+<td><label for="email_name">*Email</label></td>
+<td><input type="email" id="email" name="email" placeholder=" Enter Email"><br><br></td></tr>
+<tr>
+<td><label for="password">*Password</label></td>
+<td><input type="password" id="password" name="password" placeholder="Password"><br><br></td></tr>
+<tr>
+<td><label for="Cpassword">Confirm Password</label></td>
+<td><input type="password" id="cpassword" name="Cpassword" placeholder="Comfirm Password"><br><br></td></tr>
+<tr>
+<td><input type="submit" name="submit" value="Register" onClick=" return validate()"></td></tr>
+
+</form>
+</table>
+</body>
+</html>

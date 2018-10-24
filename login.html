@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Login-From</title>
+<script>
+function validate() {
+    var mail = document.getElementById('email').value;
+		var pass = document.getElementById('password').value;
+    if (mail == "") {
+        alert("Email must be filled out");
+		return false;
+    }
+    if (pass == "") {
+        alert("Password must be filled out");
+        return false;
+    }
+}
+</script>
+<style>
+input{
+	width:200px;
+	height:30px;
+    outline: none;
+	
+	}
+</style>
+</head>
+
+<body>
+<table align="center" style="text-align:left;">
+<form name="login" action="process/login_process.php" method="post">
+<tr>
+<td><label for="email">Email</label></td>
+<td><input type="email" id="email" name="email" placeholder=" Enter Email"><br><br></td></tr>
+<tr>
+<td><label for="password">Password</label></td>
+<td><input type="password" id="password" name="password" placeholder="Password"><br><br></td></tr>
+<tr><td></td>
+<td><input type="submit" name="submit" value="Login" onClick=" return validate()"></td></tr>
+<tr><td></td>
+<td colspan="2"><a href="signup.html"><input type="button" name="signup" value="register"></a></td></tr>
+
+</form>
+</table>
+</body>
+</html>
